@@ -1,0 +1,38 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+
+#chinh{
+width: 960px;
+margin: 0px auto;
+}
+#heder{
+	width: 960px;
+	height: 80px;
+	background-color: #808080;
+	padding-top:30px;
+	font-size:20px;
+}
+#aaa{
+	width: 300px;
+	height: 500px;
+	background-color: #C0C0C0;
+	float: left;
+}
+#bbb{
+	width: 660px;
+	height: 500px;
+	background-color: #EEEEEE;
+	float: left;
+}
+#ccc{
+	width: 960px;
+	height: 80px;
+	padding-top:30px;
+	background-color:red;
+	clear: both;
+
+}
+
