@@ -1,0 +1,73 @@
+*{
+	padding:0px;
+	margin:0px;
+}
+
+.chinh{
+width: 960px;
+margin:0px auto;
+
+}
+
+#menu{
+	width:auto;
+	height:60px;
+	background-color:#000000;
+	
+}
+#menu ul {
+	
+	list-style:none;
+}
+#menu ul li {
+	display:inline-block;
+}
+#menu ul li a{
+	color: white;
+
+	text-decoration: none;
+
+}
+#menu ul li a h3 {
+	padding: 15px 8px;
+}
+#menu ul li a:hover{
+	 color: #088A08;
+}
+#noidung{
+	width: 600px;
+	height: 300px;
+	background-color:red;
+}
+#menu2 {
+	width: 600px;
+	height: 60px;
+	background-color: #0431B4;
+}
+#menu2 ul {
+	
+	list-style:none;
+}
+#menu2 ul li {
+	display:inline-block;
+}
+#menu2 ul li a{
+	color: white;
+
+	text-decoration: none;
+
+    float: right;
+
+}
+#menu2 ul li a h6 {
+	padding: 20px 8px;
+	
+}
+#menu2 ul li a:hover{
+	 color: #088A08;
+}
+#menu2 h3{
+	float: left;
+	padding: 15px 8px
+}
+
