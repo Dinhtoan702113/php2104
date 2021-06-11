@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<title>Danh sach </title>
+<meta charset="utf-8">
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<link rel="stylesheet" type="text/css" href="css.css">
+<body>
+
+<center>
+
+<h2>Danh sach sinh viên</h2>
+
+
+<div id="heder">
+  <input oninput="w3.filterHTML('#myTable', '.item', this.value)" placeholder="Search for names..">
+<table id="myTable">
+  <tr>
+    <th onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(1)')" style="cursor:pointer">Stt</th>
+    <th onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(2)')" style="cursor:pointer">Họ Tên</th>
+     <th onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(2)')" style="cursor:pointer">Ngày sinh</th>
+      <th onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(2)')" style="cursor:pointer">Điểm</th>
+
+  </tr>
+  <tr class="item">
+    <td>1</td>
+    <td>Nguyên văn A</td>
+    <td>17//09/1224</td>
+    <td>10</td>
+  </tr>
+  <tr class="item">
+     <td>5</td>
+    <td>Nguyên văn B</td>
+    <td>17//09/1224</td>
+    <td>8</td>
+  </tr>
+  <tr class="item">
+     <td>4</td>
+    <td>Nguyên văn C</td>
+    <td>17//09/1224</td>
+    <td>9</td>
+  </tr>
+  <tr class="item">
+     <td>3</td>
+    <td>Nguyên văn D</td>
+    <td>17//09/1224</td>
+    <td>0</td>
+  </tr>
+  <tr class="item">
+     <td>2</td>
+    <td>Nguyên văn E</td>
+    <td>17//09/1224</td>
+    <td>4</td>
+  </tr>
+  
+</table>
+</div>
+<button onclick="Sort_stt()">Sort STT</button>
+<button onclick="Sort_point()">Sort Point</button>
+<button onclick="Sort_reset()">Reset Sort</button>
+</center>
+<script type="text/javascript">
+  function Sort_point() {
+        var rows, E, i, x, y, ds;
+      var bang = document.getElementById("myTable");
+      E = true;
+      while (E) 
+      {
+       E = false;
+        rows = bang.rows;
+        for (i = 1; i < (rows.length - 1); i++) 
+        {
+         ds = false;
+          x = rows[i].getElementsByTagName("td")[3];
+          y = rows[i + 1].getElementsByTagName("td")[3];
+          if (Number(x.innerHTML) > Number(y.innerHTML)) 
+          {
+           ds = true;
+              break;
+          }
+        }
+        if (ds) 
+        {
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+          E = true;
+        }
+      }
+    }
+    function Sort_reset(){
+      location.reload();
+    }
+    function Sort_stt() {
+        var rows, E, i, x, y, ds;
+      var bang = document.getElementById("myTable");
+      E = true;
+      while (E) 
+      {
+       E = false;
+        rows = bang.rows;
+        for (i = 1; i < (rows.length - 1); i++) 
+        {
+         ds = false;
+          x = rows[i].getElementsByTagName("td")[0];
+          y = rows[i + 1].getElementsByTagName("td")[0];
+          if (Number(x.innerHTML) > Number(y.innerHTML)) 
+          {
+           ds = true;
+              break;
+          }
+        }
+        if (ds) 
+        {
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+          E = true;
+        }
+      }
+    }
+  
+</script>
+</body>
+</html>
