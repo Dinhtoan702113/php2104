@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  
+  <form action="/action_page.php" class="was-validated">
+    <div class="form-group">
+      <label for="uname">Username:</label>
+      <input  onchange="checkEmpty()" type="text" class="form-control" id="name" placeholder="Enter username" name="uname" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+       <p id="tbuname" > </p>
+    </div>
+
+    <div class="form-group">
+      <label for="pwd">Email:</label>
+      <input  onchange="checkEmpty()" type="email" class="form-control" id="mail" placeholder="Enter password" name="pswd" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+
+    <div class="form-group">
+      <label for="pwd">SĐT:</label>
+      <input  onchange="checkEmpty()"type="text" class="form-control" id="sdt" placeholder="Enter password" name="pswd"  required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+      <p id="tb" > </p>
+    </div>
+
+    <div class="form-group">
+      <label for="pwd">Birthday:</label>
+      <input  onchange="checkEmpty()"type="date" class="form-control" id="ngaysinh" placeholder="Enter password" name="pswd" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+
+    <div class="form-check">
+      <label class="form-check-label" for="radio1">
+        <input  onchange="checkEmpty()"type="radio" class="form-check-input" id="nam" name="optradio" value="option1" checked>Nam
+      </label>
+    </div>
+    <div class="form-check">
+      <label class="form-check-label" for="radio2">
+        <input  onchange="checkEmpty()" type="radio" class="form-check-input" id="nu" name="optradio" value="option2">Nữ
+      </label>
+    </div>
+
+    <div class="form-group">
+      <label for="uname">Địa Chỉ:</label>
+      <input onchange="checkEmpty()" type="text" class="form-control" id="diachi" placeholder="Enter username" name="uname" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+
+     <div class="form-group">
+      <label for="textAreaExample">Message:</label>
+      <textarea  id="thongbao" class="form-control" id="textAreaExample1" rows="2" placeholder=" Enter username" name="uname" required></textarea>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+
+    <div class="form-group form-check">
+      <label class="form-check-label">
+        <input  onchange="checkEmpty()" class="form-check-input" type="checkbox" name="remember"  id="dieukhoan" required>Đồng Ý Điều Khoản.
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Check this checkbox to continue.</div>
+      </label>
+    </div>
+
+     <div class="form-group form-check">
+      <label class="form-check-label">
+        <input onchange="checkEmpty()" class="form-check-input" type="checkbox" name="remember" id="nhanemail" required>Nhận Email Tin Tức.
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Check this checkbox to continue.</div>
+      </label>
+    </div>
+    <button type="submit" id="ok" class="btn btn-primary col-1 disabled">Submit</button>
+  </form>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+      <script type="text/javascript">
+        function checkEmpty() {
+             console.log('ok');
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("mail").value;
+            let sdt = document.getElementById("sdt").value;
+            let ngaysinh = document.getElementById("ngaysinh").value;
+            let thongbao = document.getElementById("thongbao").value;
+            let gioitinh = '';
+           
+            
+            let diachi = document.getElementById("diachi").value;
+            let dieukhoan = document.getElementById("dieukhoan").value;
+            let nhanemail = document.getElementById("nhanemail").value;
+
+            var x =name.length;
+
+            if(x >=30){
+              document.getElementById('tbuname').innerHTML = "Chi duoc nhap duoi 30 ki tu!!!";
+            }
+            
+            var txt = sdt.replace(/[1-9]+/ig,"");
+            if(txt ==""){
+            
+            }else{
+              document.getElementById('tb').innerHTML = "Nhap so nhe!!!";
+            }
+           
+
+            if (name != '' && email != '' && sdt != '' && ngaysinh != '' && diachi != '' && thongbao != '') {
+                console.log('enable');
+                document.getElementById("ok").classList.remove("disabled");
+                alert('Nhập đúng định dạng');
+            } else {
+                console.log('disable');
+                document.getElementById("ok").classList.add("disabled");
+            }
+
+          
+        }
+    </script>
+</div>
+
+</body>
+</html>
