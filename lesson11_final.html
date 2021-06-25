@@ -1,0 +1,50 @@
+   <!DOCTYPE html>
+<html>
+<head>
+	<title>Quan ly sinh vien </title>
+	<link rel="stylesheet" type="text/css" href="cssstyle.css">
+
+</head>
+<body onload="luuds()">
+	<div class="form-studen">
+		<h3>Thong tin sinh vien</h3>	
+		<label>Ho Va Ten</label>
+		<input type="text" id="fullname" />
+		<span id="loiname" class="loi"></span>
+		<br>
+
+		<label>Dia chi email</label>
+		<input type="text" id="email" />
+		<span id="loiemail" class="loi"></span>
+		<br>
+		
+		<label>So Dien Thoai</label>
+		<input type="text" id="phone" />
+		<span id="loiphone" class="loi"></span>
+		<br>
+
+		<label>Dia Chi</label>
+		<input type="text" id="diachi" />
+		<span id="loidiachi" class="loi"></span>
+		<br>
+
+		<label>Gioi Tinh</label>
+		<input type="radio" name="gender" id="nam"  value="1" />Nam
+		<input type="radio" name="gender" id="nu"  value="2" />Nu
+		<span id="loigt" class="loi"></span>
+		<br>
+		<label></label>
+		<button onclick="save()"> Save</button>
+    </div>
+
+    <div class="list-studen">
+    	<h3>Danh sach sinh vien</h3>	
+    	<table id="grid-student" width="600" border="1" cellpadding="0" cellpadding="0">
+    		
+
+    	</table>
+    	
+    </div>
+<script   src="jav.js"    type="text/javascript"></script>
+</body>
+</html>
